@@ -1,0 +1,16 @@
+name: Teste Runner Publico
+
+on:
+  push:
+    branches:
+      - diagnostico-actions-publico
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testar runner
+        run: |
+          echo "PUBLIC_RUNNER_OK"
+          python --version
+          uname -a
